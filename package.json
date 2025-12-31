@@ -1,0 +1,31 @@
+{
+  "name": "xmas-foofer",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^7.3.0"
+  },
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "esbuild": "^0.27.2",
+    "fdir": "^6.5.0",
+    "nanoid": "^3.3.11",
+    "picocolors": "^1.1.1",
+    "picomatch": "^4.0.3",
+    "postcss": "^8.5.6",
+    "rollup": "^4.54.0",
+    "source-map-js": "^1.2.1",
+    "three": "^0.182.0",
+    "tinyglobby": "^0.2.15"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
