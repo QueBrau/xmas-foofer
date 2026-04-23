@@ -127,46 +127,46 @@ const catEggs = [
   {
     id: 'bootsie',
     name: 'Bootsie',
-    model: '/bootsie.glb',
+    model: `${import.meta.env.BASE_URL}bootsie.glb`,
     position: new THREE.Vector3(-4.99, 9.44, -5.22),
     scale: 0.6,
     radius: 1.5,
     triggered: false,
     message: 'Bootsie — The most gentle angel in heaven...',
-    sound: new Audio('/bootsiemeow.mp3')
+    sound: new Audio(`${import.meta.env.BASE_URL}bootsiemeow.mp3`)
   },
   {
     id: 'skippy',
     name: 'Skippy',
-    model: '/skippy.glb',
+    model: `${import.meta.env.BASE_URL}skippy.glb`,
     position: new THREE.Vector3(-8.28, 3.2, 0.38),
     scale: 0.6,
     radius: 1.5,
     triggered: false,
     message: 'Skippy — A grumpy old man...',
-    sound: new Audio('/skippymeow.mp3')
+    sound: new Audio(`${import.meta.env.BASE_URL}skippymeow.mp3`)
   },
   {
     id: 'raven',
     name: 'Raven',
-    model: '/raven.glb',
+    model: `${import.meta.env.BASE_URL}raven.glb`,
     position: new THREE.Vector3(4.45, 0.39, 1.43),
     scale: 0.6,
     radius: 1.5,
     triggered: false,
     message: 'Raven — Looking for fish to eat...',
-    sound: new Audio('/ravenmeow.mp3')
+    sound: new Audio(`${import.meta.env.BASE_URL}ravenmeow.mp3`)
   },
   {
     id: 'popcorn',
     name: 'Popcorn',
-    model: '/popcorn.glb',
+    model: `${import.meta.env.BASE_URL}popcorn.glb`,
     position: new THREE.Vector3(6.2, 3.48, -9.76),
     scale: 0.6,
     radius: 1.5,
     triggered: false,
     message: 'Popcorn — Delicately enjoying the hot sicilian sun...',
-    sound: new Audio('/popcornmeow.mp3')
+    sound: new Audio(`${import.meta.env.BASE_URL}popcornmeow.mp3`)
   }
 ]
 
@@ -180,7 +180,7 @@ catEggs.forEach(cat => cat.sound.volume = 0.7)
 const loader = new GLTFLoader()
 let city = null
 
-loader.load('/cityscene_-_cefalu.glb', (gltf) => {
+loader.load(`${import.meta.env.BASE_URL}cityscene_-_cefalu.glb`, (gltf) => {
   city = gltf.scene
 
   const box = new THREE.Box3().setFromObject(city)
@@ -324,16 +324,16 @@ const down = new THREE.Vector3(0, -1, 0)
 // =====================
 // Audio
 // =====================
-const bootsiemeow = new Audio('/bootsiemeow.mp3')
+const bootsiemeow = new Audio(`${import.meta.env.BASE_URL}bootsiemeow.mp3`)
 bootsiemeow.volume = 0.7  // adjust volume if needed
 
-const skippymeow = new Audio('/skippymeow.mp3')
+const skippymeow = new Audio(`${import.meta.env.BASE_URL}skippymeow.mp3`)
 skippymeow.volume = 0.7  // adjust volume if needed
 
-const ravenmeow = new Audio('/ravenmeow.mp3')
+const ravenmeow = new Audio(`${import.meta.env.BASE_URL}ravenmeow.mp3`)
 ravenmeow.volume = 0.7  // adjust volume if needed
 
-const popcornmeow = new Audio('/popcornmeow.mp3')
+const popcornmeow = new Audio(`${import.meta.env.BASE_URL}popcornmeow.mp3`)
 popcornmeow.volume = 0.7  // adjust volume if needed
 
 
